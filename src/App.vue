@@ -1,10 +1,17 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/news">News</router-link> |
+      <router-link to="/">Home</router-link>
+      <router-link to="/news">News</router-link>
       <router-link to="/about">About</router-link>
     </div>
+    <nav>
+      <a v-for="(item,index) in navList"
+        :class="{active:tab === index}"
+        @click="tab = index"
+        :key="item"
+      >{{ item }}</a>
+    </nav>
     <Breadcrumb />
     <router-view/>
     <h2>鐵人30抽獎活動</h2>
@@ -70,6 +77,8 @@ export default {
       airPollution: 152,
       saveDate: saveDate,
       dinner:[],
+      tab: 0,
+      navList: ['本月活動','超值套餐','人氣加點','分店資訊']
     }
   },
   watch: {
@@ -123,8 +132,36 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-family: 'Microsoft JhengHei', 'Apple LiGothic Medium', 'PMingLiU',
+    'sans-serif', 'serif';
 }
-
+nav {
+    display: inline-block;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+  }
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #474747;
+  }
+  a:not(:last-child) {
+    border-right: 1px solid #aaaaaa;
+  }
+  a:hover {
+    color: #888888;
+    cursor: pointer;
+    background-color: #dedede;
+  }
+  .active {
+    background-color: #e8792e;
+    color: white;
+  }
+  .active:hover {
+    color: white;
+    cursor: default;
+    background-color: #e8792e;
+  }
 #nav {
   padding: 30px;
 
