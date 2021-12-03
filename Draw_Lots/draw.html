@@ -56,13 +56,13 @@
                     <div class="lineY"></div>
                     <!--抽籤結果-->
                     <div class="drawEnd" v-show="drawEnd">
-                        <p v-text="drawList"></p>
+                        <h2 v-text="drawList"></h2>
                         <!--<h2 v-text="fate">-->
                             
                         </h2>
-                        <p v-text="drawTitle">
+                        <h2 v-text="drawTitle">
                             
-                        </p>
+                        </h2>
                     </div> 
                     <!--解籤說明-->
                     <div class="detail" v-show="detail">
@@ -74,7 +74,6 @@
                             <h4 v-html="poem">
                                 
                             </h4>
-                            <h3> </h3>
                             <p v-html="mean">
 
                             </p>
