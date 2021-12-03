@@ -37,3 +37,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 7. beforeDestroy：實例銷毀之前(實例還可以使用)。
 8. destroyed：實例已銷毀(所有綁定被解除、所有事件監聽器被移除、所有子實例被移除)。
 
+[Draw_Lots](https://hsu-hui.github.io/Vue-demo/Draw_Lots/draw.html)
